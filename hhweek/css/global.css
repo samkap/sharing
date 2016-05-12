@@ -1,0 +1,296 @@
+/*
+Goldilocks Approach to Responsive Web Design Boilerplate
+
+Author: Design by Front - @designbyfront
+Version: 0.1
+URL: http://www.goldilocksapproach.com
+----------------------------------------------------------------------------------------
+
+CONTENTS - GLOBAL.CSS
+-----------------------------------------
+1. RESET
+2. ROOT
+3. CORE TYPOGRAPHY
+4. LINKS
+5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+7. BROWSER AND NON-SEMANTIC STYLING
+
+CONTENTS - LAYOUT.CSS
+-----------------------------------------
+8. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+9. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+
+*/
+
+
+/* 1. RESET
+----------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration:none;
+  font-size:100%;
+  font: inherit;
+  vertical-align: baseline;
+  }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+  }
+  
+  
+  
+/* 2. ROOT
+----------------------------------------------------------------------------------------*/
+html { 
+  overflow-y: scroll;
+
+  }
+
+/* /ht Ethan Marcotte - http://front.ie/l8rJaA */
+img, embed, object, video { max-width: 100%; }
+.ie6 img.full, .ie6 object.full, .ie6 embed, .ie6 video { width: 100%; }
+
+
+
+/* 3. CORE TYPOGRAPHY
+----------------------------------------------------------------------------------------*/
+body {
+  font-family: Arial, "Helvetica", sans-serif;
+  font-size: 1em;
+  line-height: 1.618em;
+  color: #7c7c7c;
+  background-color: gray;
+  background-image: url(../images/bg.jpg);
+  background-attachment: fixed;
+  background-position: left top;
+  background-size: cover;
+  
+
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.809em;
+  line-height: 1em;
+  }
+
+p, ul, ol, dl, blockquote {
+    font-size: 1em;
+    line-height: 1.618em;
+    margin-bottom: 1.618em; 
+    max-width: 30em; /* Optimal width for long-form text */
+  }
+    
+ul { list-style-type: disc; margin-left: 1.618em; }
+ol { list-style-type: decimal; margin-left: 1.618em; }
+
+
+.relative {
+  position: relative;
+}
+header {
+overflow: hidden;
+position: fixed;
+z-index: 9999;
+ width: 94%;
+
+ 
+}
+
+a, a:visited { outline: none; text-decoration: none;color: white; padding-bottom: 2px; border-bottom: 1px #a86127 solid; }  
+a:hover { outline: none; border: 0; }  
+a:active, a:focus { outline: none; }
+nav, #logo {
+
+
+}
+
+.black {
+  width:  100%;
+   background: rgba(0,0,0,.7);
+   height: 120px;
+   position: fixed;
+   z-index: 2;
+}
+
+#logo {
+  width: 30%;
+  float: left;
+  margin-right: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+   max-width: 70px;
+ 
+}
+.mainimg {
+  width: 100%;
+  height: 200px;
+}
+
+.tinynav { display: block; float: right;  }
+#nav2  { display: none } 
+
+
+
+nav {
+  margin-top: 12px;
+  overflow: hidden;
+}
+.tinynav { display: block; }
+#nav { display: none; }
+
+nav select {
+  display:block;
+  width: 200px;
+  float: left;
+  margin-top: 12px;
+}
+
+nav ul, nav ol { list-style: none; margin: 0; padding: 0;}
+
+#logo a:link, #logo a:visited, #logo a:hover, nav ul li a,nav ul li a:link, nav ul li a:visited {
+  text-decoration: none !important; border-bottom: 0; color: #a86127; font-size: 1em; letter-spacing: .02em; font-weight: bold; }
+  
+nav ul li a:hover {
+  color: white;
+}
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+small { font-size: 80%; }
+
+footer {
+  width: 100%;
+  min-height: 30px;
+}
+
+
+
+h1 {
+  font-size: 1em;
+}
+
+h2 {
+  font-size: 1.45em;
+  color: #a86127;
+  margin-top: 1em;
+  font-style: italic;
+  
+}
+
+.days h3 {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+
+h4 {
+  margin-top: 5px;
+}
+p {
+  max-width: 600px;
+  font-size: 1.1em;
+}
+
+.abouttext {
+  font-size: 1.15em;
+  color: #b4b4b4;
+}
+
+.days, .panel{
+  width: 90%;
+  padding: 2em 5%;
+  background: white;
+  min-height: 200px;
+ margin-bottom: 15px; 
+}
+
+.panel a:link, .panel a:visited{
+  color: #7c7c7c;
+}
+
+.button{
+background: #A86127;
+
+display: inline-block;
+padding: 5px 10px 6px;
+color: white;
+text-decoration: none;
+font-weight: bold;
+margin-top: 10px;
+font-size: .85em;
+line-height: 1;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-box-shadow: 0 1px 3px #333;
+-webkit-box-shadow: 0 1px 3px #333;
+text-shadow: 0 -1px 1px #333;
+border-bottom: 1px solid #333;
+position: relative;
+width: 127px;
+padding: 10px;
+cursor: pointer;
+}
+
+#events, #volunteers, #housing, #documentary, #toolkits, #contact {
+	clear: left;
+}
+
+#main {
+  position: relative;
+top: 240px;
+}
+
+
+
+/* 4. LINKS
+----------------------------------------------------------------------------------------*/
+
+
+
+/* 5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+----------------------------------------------------------------------------------------*/
+
+
+
+/* 6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+----------------------------------------------------------------------------------------*/
+#container, #innerfooter {
+    padding: 0.809em;
+    padding-top: 0;
+    max-width: 30em;
+    margin: auto;
+    position: relative;
+  
+  }
+
+aside { width: 100%; }
+
+
+
+#innerfooter p {
+  float: right;
+}
+
+footer p a:link, footer p a:visited {
+  color: #7c7c7c;
+}
+/* 7. BROWSER AND NON-SEMANTIC STYLING
+----------------------------------------------------------------------------------------*/
+.cf:before, .cf:after { content: ""; display: block; }
+.cf:after { clear: both; }
+.ie6 .cf { zoom: 1 }

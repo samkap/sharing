@@ -1,0 +1,95 @@
+/* Setup stuff */
+body {
+  font: 125%/2em sans-serif;
+  text-align: center;
+}
+
+
+.wrap {
+  max-width: 96%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 1140px) {
+  .wrap {
+    max-width: 1200px;
+  }
+}
+
+/* Flexy image grid stuff below */
+ul { 
+  list-style-type: none;
+  margin: 0 0 1em;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.students {
+  width: 100%;
+  /* Next Level Flex Box */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+
+  display: box;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+}
+
+img {
+  max-height: 12em; /* max-height == .students height */
+}
+
+li:last-of-type {
+  border-right: none;
+}
+
+li {
+  max-height: 30em;
+  width: 100%;
+}
+
+@media (min-width: 320px) {
+	.students { 
+    height: 11.75em; 
+  }
+  li {
+    width: 50%;
+
+  }
+}
+@media (min-width: 700px) {
+  li {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 770px) {
+    li {
+        width:25%;
+    }
+}
+@media (min-width: 1140px) {
+  li {
+    width: 20%;
+  }
+  li:nth-of-type(3n+3) {
+  }
+  li:nth-of-type(4n+4) {
+    border-right: none;
+  }
+}
